@@ -69,3 +69,27 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Git Clone
+```
+git clone https://github.com/JasperCool79/MicroEcommerce.git
+```
+## .env setup
+```
+change .env.example to .env
+```
+## db setup
+```
+create new db with the name "my_shop" in phpMyadmin MySQL 
+then import my_shop.sql
+```
+### Start Serve
+```
+php artisan serve
+```
+### Admin Crendital
+```
+email => admin@gmail.com
+password => 12345678
+```
+
