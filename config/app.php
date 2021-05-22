@@ -52,9 +52,9 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://fast-eyrie-16166.herokuapp.com'),
 
-    'asset_url' => env('ASSET_URL', 'http://fast-eyrie-16166.herokuapp.com/'),
+    'asset_url' => env('ASSET_URL', 'http://fast-eyrie-16166.herokuapp.com'),
 
     /*
     |--------------------------------------------------------------------------
