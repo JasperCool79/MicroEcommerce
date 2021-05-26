@@ -52,9 +52,9 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://fast-eyrie-16166.herokuapp.com'),
+    'url' => env('APP_URL', 'https://mico-ecommerce.herokuapp.com'),
 
-    'asset_url' => env('ASSET_URL', 'http://fast-eyrie-16166.herokuapp.com'),
+    'asset_url' => env('ASSET_URL', 'https://mico-ecommerce.herokuapp.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -175,6 +175,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
 
     ],
 
