@@ -16,7 +16,7 @@ class AuthController extends ResponseController
             'name' => 'required|string|',
             'email' => 'required|string|email|unique:users',
             'password' => 'required',
-            'confirm_password' => 'required|same:password'
+            'confirm_password' => 'required'
         ]);
 
         if($validator->fails()){

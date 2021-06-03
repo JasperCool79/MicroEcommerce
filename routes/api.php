@@ -17,20 +17,10 @@ use Illuminate\Http\Request;
 |
 */
 
-// Route::middleware('auth:api')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+
 Route::group(['namespace'=>'API','middleware' => ['guest:api']], function () {
     Route::post('login', 'AuthController@login');
     Route::post('signup', 'AuthController@signup');
-});
-Route::group(['namespace'=>'API','middleware'=>['auth:api']], function() {
-    // Route::get('hello',function(){
-    //     return response()->json(['test' => 'test']);
-    // });
-    Route::get('logout', 'AuthController@logout');
-    Route::get('getuser', 'AuthController@getUser');
-
 });
 
 Route::group(['namespace'=>'API'],function(){
@@ -39,5 +29,10 @@ Route::group(['namespace'=>'API'],function(){
     Route::get('get_latest_products','ProductController@latest');
     Route::get('get_best_selling_products','ProductController@best_selling');
     Route::get('get_popular_products','ProductController@popular');
+    Route::get('get_products_category_id','ProductController@getProductCategory');
+    Route::get('get_product_id','ProductController@getProductById');
+    Route::post('store_order','OrderController@make_order');
+    Route::post('send_proof','OrderController@send_proof');
+
     Route::get('get_reviews','ReviewController@index');
 });

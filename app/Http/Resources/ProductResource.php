@@ -12,6 +12,7 @@ class ProductResource extends JsonResource
      * @param  \Illuminate\Http\Request  $request
      * @return array
      */
+    
     public function toArray($request)
     {
         $url = env('APP_URL');
@@ -25,7 +26,7 @@ class ProductResource extends JsonResource
             "description"=>$this->description,
             "product_img"=>unserialize($this->product_img),
             "product_img_url"=> $url.'/uploads/product/',
-            "options"=>$this->options,
+            "options"=> unserialize($this->options),
             "best_selling"=>$this->best_selling,
             "popular"=>$this->popular,
             "order_type"=>$this->order_type,
