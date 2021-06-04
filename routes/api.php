@@ -1,11 +1,11 @@
 <?php
 
-use Illuminate\Http\Request;
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET,HEAD,OPTIONS,POST,PUT');
-header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization, X-CSRF-Token');
-header('Access-Control-Allow-Credentials: true');
 
+header('Access-Control-Allow-Origin:  *');
+header('Access-Control-Allow-Methods:  POST, GET, OPTIONS, PUT, PATCH, DELETE');
+header('Access-Control-Allow-Headers: Accept, Content-Type, X-Auth-Token, Origin, Authorization');
+
+use Illuminate\Http\Request;
 
 
 /*
