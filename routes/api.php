@@ -1,10 +1,5 @@
 <?php
 
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS, post, get');
-header("Access-Control-Max-Age", "3600");
-header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token');
-header("Access-Control-Allow-Credentials", "true");
 
 use Illuminate\Http\Request;
 
@@ -26,7 +21,7 @@ Route::group(['namespace'=>'API','middleware' => ['guest:api']], function () {
     Route::post('signup', 'AuthController@signup');
 });
 
-Route::group(['namespace'=>'API'],function(){
+Route::group(['namespace'=>'API','middlreware'=>'cors'],function(){
     Route::get('contact_info','ContactInfoController@index');
     Route::get('get_categories','CategoryController@index');
     Route::get('get_latest_products','ProductController@latest');
