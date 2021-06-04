@@ -21,7 +21,7 @@ Route::group(['namespace'=>'API','middleware' => ['guest:api']], function () {
     Route::post('signup', 'AuthController@signup');
 });
 
-Route::group(['namespace'=>'API','middlreware'=>'cors'],function(){
+Route::group(['namespace'=>'API','middlreware'=>['cors']],function(){
     Route::get('contact_info','ContactInfoController@index');
     Route::get('get_categories','CategoryController@index');
     Route::get('get_latest_products','ProductController@latest');
