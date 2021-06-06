@@ -40,7 +40,7 @@ Route::group(['namespace'=>'API','middleware' => ['guest:api']], function () {
 //     Route::get('get_reviews','ReviewController@index');
 // });
 
-Route::group(['middleware' => ['api', 'cors'],'namespace'=>'API'],function(){
+Route::group(['middleware' => ['cors'],'namespace'=>'API'],function(){
     Route::get('contact_info','ContactInfoController@index');
     Route::get('get_categories','CategoryController@index');
     Route::get('get_latest_products','ProductController@latest');
