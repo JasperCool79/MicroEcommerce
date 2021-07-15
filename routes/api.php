@@ -42,13 +42,21 @@ Route::group(['namespace'=>'API','middleware' => ['guest:api']], function () {
 
 Route::group(['middleware' => ['cors'],'namespace'=>'API'],function(){
     Route::get('contact_info','ContactInfoController@index');
+
     Route::get('get_categories','CategoryController@index');
+
     Route::get('get_latest_products','ProductController@latest');
+
     Route::get('get_best_selling_products','ProductController@best_selling');
+
     Route::get('get_popular_products','ProductController@popular');
+
     Route::get('get_products_category_id','ProductController@getProductCategory');
+
     Route::get('get_product_id','ProductController@getProductById');
+
     Route::post('store_order','OrderController@make_order');
+    
     Route::post('send_proof','OrderController@send_proof');
 
     Route::get('get_reviews','ReviewController@index');
