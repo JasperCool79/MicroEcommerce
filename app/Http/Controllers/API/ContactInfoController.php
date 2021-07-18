@@ -19,7 +19,6 @@ class ContactInfoController extends Controller
         env('OWNER_MESSENGER_NAME') ? $data['messenger_name'] = env('OWNER_MESSENGER_NAME') : $data['messenger_name'] = null;
         env('OWNER_MESSENGER_ID') ? $data['messenger_id'] = env('OWNER_MESSENGER_ID') : $data['messenger_id'] = null;
         env('OWNER_ADDRESS') ? $data['address'] = env('OWNER_ADDRESS') : $data['address'] = null;
-        return $data;
         if(count($data)>0){
             return response()->json(['code'=>200,'data'=>$data,'messenge'=>'Success']);
         }else{
